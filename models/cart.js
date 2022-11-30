@@ -1,6 +1,6 @@
 'use strict';
 const {
-  Model
+  Model, Sequelize
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Cart extends Model {
@@ -23,6 +23,16 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Cart.init({
+    userId: {
+      type: Sequelize.INTEGER,
+      allowNull: false,
+      field: 'user_id',
+      onDelete: 'CASCADE',
+      references: {
+        model: 'users',
+        key: 'id'
+      }
+    },
     items: DataTypes.ARRAY,
     subtotal: DataTypes.FLOAT,
     user_id: DataTypes.INTEGER

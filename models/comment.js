@@ -1,6 +1,6 @@
 'use strict';
 const {
-  Model
+  Model, Sequelize
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Comment extends Model {
@@ -18,6 +18,16 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Comment.init({
+    userId: {
+      type: Sequelize.INTEGER,
+      allowNull: false,
+      field: 'user_id',
+      onDelete: 'CASCADE',
+      references: {
+        model: 'users',
+        key: 'id'
+      }
+    },
     username: DataTypes.STRING,
     content: DataTypes.STRING,
     likes: DataTypes.INTEGER,
