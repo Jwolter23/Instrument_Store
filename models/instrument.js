@@ -10,7 +10,16 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Instrument.belongsTo(models.Review, {
+        foreignKey: 'review_id',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
+      });
+      Instrument.belongsTo(models.Cart, {
+        foreignKey: 'cart_id',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
+      });
     }
   }
   Instrument.init({
