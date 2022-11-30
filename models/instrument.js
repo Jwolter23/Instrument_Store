@@ -1,6 +1,6 @@
 'use strict';
 const {
-  Model
+  Model, Sequelize
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Instrument extends Model {
@@ -23,6 +23,26 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Instrument.init({
+    reviewId: {
+      type: Sequelize.INTEGER,
+      allowNull: false,
+      field: 'review_id',
+      onDelete: 'CASCADE',
+      references: {
+        model: 'reviews',
+        key: 'id'
+      }
+    },
+    cartId: {
+      type: Sequelize.INTEGER,
+      allowNull: false,
+      field: 'cart_id',
+      onDelete: 'CASCADE',
+      references: {
+        model: 'carts',
+        key: 'id'
+      }
+    },
     brand: DataTypes.STRING,
     type: DataTypes.STRING,
     model: DataTypes.STRING,
