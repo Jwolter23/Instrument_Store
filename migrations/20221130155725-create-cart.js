@@ -10,7 +10,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       items: {
-        type: Sequelize.ARRAY
+        type: Sequelize.STRING
       },
       subtotal: {
         type: Sequelize.FLOAT
