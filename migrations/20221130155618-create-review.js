@@ -19,7 +19,14 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       user_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+          allowNull: false,
+          field: 'user_id',
+          onDelete: 'CASCADE',
+          references: {
+            model: 'users',
+            key: 'id'
+          }
       },
       createdAt: {
         allowNull: false,
@@ -29,6 +36,7 @@ module.exports = {
         allowNull: false,
         type: Sequelize.DATE
       }
+      
     });
   },
   async down(queryInterface, Sequelize) {
