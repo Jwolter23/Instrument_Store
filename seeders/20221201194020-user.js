@@ -12,7 +12,19 @@ module.exports = {
           firstName: 'Bryan',
           lastName: 'Smith',
           email: 'bsmith@gmail.com',
-          isLoggedIn: false
+          isLoggedIn: false,
+          createdAt: new Date(),
+          updatedAt: new Date()
+        },
+        {
+          username: 'PianoPlayer42',
+          passwordDigest: 'dijfileked83784hhuh222b1jj',
+          firstName: 'Joe',
+          lastName: 'Jongo',
+          email: 'jjongo42@gmail.com',
+          isLoggedIn: false,
+          createdAt: new Date(),
+          updatedAt: new Date()
         }
       ]
     )
