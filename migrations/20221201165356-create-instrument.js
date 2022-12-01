@@ -28,7 +28,14 @@ module.exports = {
         type: Sequelize.FLOAT
       },
       cart_id: {
-        type: Sequelize.INTEGER
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        field: 'cart_id',
+        onDelete: 'CASCADE',
+        references: {
+          model: 'carts',
+          key: 'id'
+        }
       },
       review_id: {
         type: Sequelize.INTEGER

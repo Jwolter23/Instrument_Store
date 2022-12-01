@@ -1,6 +1,6 @@
 'use strict';
 const {
-  Model
+  Model, Sequelize
 } = require('sequelize');
 module.exports = (sequelize, DataTypes) => {
   class Instrument extends Model {
@@ -10,10 +10,29 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Instrument.belongsTo(models.Cart, {
+        foreignKey: 'cart_id',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
+      }),
+      Instrument.hasMany(models.Review, {
+        foreignKey: 'review_id',
+        onDelete: 'CASCADE',
+        onUpdate: 'CASCADE'
+      })
     }
   }
   Instrument.init({
+    cartId: {
+      type: Sequelize.INTEGER,
+      allowNull: false,
+      field: 'cart_id',
+      onDelete: 'CASCADE',
+      references: {
+        model: 'carts',
+        key: 'id'
+      }
+    },
     brand: DataTypes.STRING,
     type: DataTypes.STRING,
     model: DataTypes.STRING,
