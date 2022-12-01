@@ -25,6 +25,16 @@ module.exports = {
           isLoggedIn: false,
           createdAt: new Date(),
           updatedAt: new Date()
+        },
+        {
+          username: 'DrumsPlayer3',
+          passwordDigest: 'hfhsbdkkhello7766255',
+          firstName: 'George',
+          lastName: 'Lopez',
+          email: 'famousgeorge3@gmail.com',
+          isLoggedIn: false,
+          createdAt: new Date(),
+          updatedAt: new Date()
         }
       ]
     )
