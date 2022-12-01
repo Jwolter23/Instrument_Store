@@ -2,7 +2,7 @@
   "development": {
     "username": "postgres",
     "password": "harley1998",
-    "database": "Instruments_database_development",
+    "database": "instruments_database_development",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
