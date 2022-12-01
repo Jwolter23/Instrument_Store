@@ -25,6 +25,16 @@ module.exports = {
           createdAt: new Date(),
           updatedAt: new Date()
           
+        },
+        {
+          username: 'DrumsPlayer3',
+          content: 'THIS INSTRUMENT ROCKS',
+          user_id: 3,
+          instrument_id: 3,
+          rating: 4,
+          createdAt: new Date(),
+          updatedAt: new Date()
+          
         }
       ]
     )
