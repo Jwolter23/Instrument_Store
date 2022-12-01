@@ -6,9 +6,10 @@ const Register = () => {
   let navigate = useNavigate();
 
   const [formValues, setFormValues] = useState({
-    name: "",
+    firstName: "",
+    lastName: "",
+    username: "",
     email: "",
-    password: "",
     confirmPassword: "",
   });
 
@@ -20,15 +21,18 @@ const Register = () => {
     e.preventDefault();
 
     await RegisterUser({
-      name: formValues.name,
+      firstName: formValues.firstName,
+      lastName: formValues.lastName,
+      username: formValues.username,
       email: formValues.email,
       password: formValues.password,
     });
 
     setFormValues({
-      name: "",
+      firstName: "",
+      lastName: "",
+      username: "",
       email: "",
-      password: "",
       confirmPassword: "",
     });
     navigate("/signin");
@@ -39,13 +43,35 @@ const Register = () => {
       <div className="card-overlay centered">
         <form className="col" onSubmit={handleSubmit}>
           <div className="input-wrapper">
-            <label htmlFor="name">Name</label>
+            <label htmlFor="firstname">First Name</label>
             <input
               onChange={handleChange}
-              name="name"
+              name="firstName"
+              type="text"
+              placeholder="John"
+              value={formValues.firstName}
+              required
+            />
+          </div>
+          <div className="input-wrapper">
+            <label htmlFor="lastname">Last Name</label>
+            <input
+              onChange={handleChange}
+              name="lastName"
+              type="text"
+              placeholder="Smith"
+              value={formValues.lastName}
+              required
+            />
+          </div>
+          <div className="input-wrapper">
+            <label htmlFor="username">Username</label>
+            <input
+              onChange={handleChange}
+              name="username"
               type="text"
               placeholder="John Smith"
-              value={formValues.name}
+              value={formValues.username}
               required
             />
           </div>
