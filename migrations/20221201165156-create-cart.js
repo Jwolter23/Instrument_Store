@@ -16,6 +16,16 @@ module.exports = {
         type: Sequelize.FLOAT
       },
       user_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        field: 'user_id',
+        onDelete: 'CASCADE',
+        references: {
+          model: 'users',
+          key: 'id'
+        }
+      },
+      instrument_id: {
         type: Sequelize.INTEGER
       },
       createdAt: {
