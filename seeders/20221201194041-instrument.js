@@ -13,7 +13,9 @@ module.exports = {
         color: 'White',
         price: '$5799.00',
         cart_id: '1',
-        review_id: '1'
+        review_id: '1',
+        createdAt: new Date(),
+        updatedAt: new Date()
      },
 
      {
@@ -24,7 +26,9 @@ module.exports = {
        color: 'Cherry',
        price: '$1999.00',
        cart_id: '2',
-       review_id: '2'
+       review_id: '2',
+       createdAt: new Date(),
+       updatedAt: new Date()
       },
 
      {
@@ -35,7 +39,9 @@ module.exports = {
         color: 'Sixties Cherry',
         price: '$3499.00',
        cart_id: '3',
-       review_id: '3'
+       review_id: '3',
+       createdAt: new Date(),
+       updatedAt: new Date()
       },
 
       {
@@ -46,7 +52,9 @@ module.exports = {
         color: 'Antique Natural',
         price: '$1999.00',
         cart_id: '4',
-        review_id: '4'
+        review_id: '4',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
 
       {
@@ -57,7 +65,9 @@ module.exports = {
         color: 'Antique Natural',
         price: '$1999.00',
         cart_id: '5',
-        review_id: '5'
+        review_id: '5',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
 
       {
@@ -68,7 +78,9 @@ module.exports = {
         color: 'Sunburst',
         price: '$2049.00',
         cart_id: '6',
-        review_id: '6'
+        review_id: '6',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
 
       {
@@ -79,7 +91,9 @@ module.exports = {
         color: 'Sunburst',
         price: '$1699.00',
         cart_id: '7',
-        review_id: '7'
+        review_id: '7',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
 
       {
@@ -90,7 +104,9 @@ module.exports = {
         color: 'Roasted Pine',
         price: '$1799.00',
         cart_id: '8',
-        review_id: '8'
+        review_id: '8',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
 
       {
@@ -101,7 +117,9 @@ module.exports = {
         color: 'Onyx Black',
         price: '$3499.00',
         cart_id: '9',
-        review_id: '9'
+        review_id: '9',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
 
       {
@@ -112,7 +130,9 @@ module.exports = {
         color: 'Gold Boy',
         price: '$5799.00',
         cart_id: '10',
-        review_id: '10'
+        review_id: '10',
+        createdAt: new Date(),
+        updatedAt: new Date()
       },
 
 
