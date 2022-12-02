@@ -9,8 +9,8 @@ export default function Nav () {
            <Link to="/instruments">
                <h2 className="nav-item2">Instruments</h2>
            </Link>
-           <Link to="/cart">
-               <h2 className="nav-item3">Cart</h2>
+           <Link to="/about">
+               <h2 className="nav-item3">About</h2>
            </Link>
        </div>
     )

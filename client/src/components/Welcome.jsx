@@ -5,13 +5,14 @@ const Welcome = ({ authenticated,user, handleLogOut }) => {
   if (user) {
     authenticatedOptions = (
       <nav className='login-options'>
-        <h3>Welcome {user.email}!</h3>
+        <h3>Welcome {user.username}!</h3>
         <Link to="/cart" className='login'>cart</Link>
         <Link onClick={handleLogOut} className="login" to="/">
           Sign Out
         </Link>
       </nav>
     )
+    console.log(user)
   }
 
   const publicOptions = (

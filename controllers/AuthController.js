@@ -4,7 +4,7 @@ const middleware = require("../middleware");
 const Login = async (req, res) => {
   try {
     const user = await User.findOne({
-      where: { email: req.body.email },
+      where: { username: req.body.username },
       raw: true,
     });
 
@@ -15,6 +15,7 @@ const Login = async (req, res) => {
       let payload = {
         id: user.id,
         email: user.email,
+        username: user.username,
       };
       let token = middleware.createToken(payload);
       return res.send({ user: payload, token });
