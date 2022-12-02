@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { CheckSession } from "./services/Auth";
-
 import "./styles/App.css";
 import Header from "./components/Header";
 import Main from "./components/Main";
@@ -32,12 +31,16 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Header />
+        <Header
+          handleLogOut={handleLogOut}
+          user={user}
+          authenticated={authenticated}
+        />
       </header>
       <main className="App-main">
-        <Main />
+        <Main setUser={setUser} toggleAuthenticated={toggleAuthenticated} />
       </main>
-      <footer>
+      <footer className="App-footer">
         <Footer />
       </footer>
     </div>
