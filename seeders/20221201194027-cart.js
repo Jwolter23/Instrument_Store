@@ -8,21 +8,21 @@ module.exports = {
       {
         items: 'Les Paul Custom',
         subtotal: 5799.00,
-        user_id: 1,
+        user_id: 4,
         createdAt: new Date(),
         updatedAt: new Date()
      },
      {
       items: 'SG Standard',
       subtotal: 1999.00,
-      user_id: 2,
+      user_id: 5,
       createdAt: new Date(),
       updatedAt: new Date()
    },
    {
     items: 'ES-335',
     subtotal: 3499.00,
-    user_id: 3,
+    user_id: 6,
     createdAt: new Date(),
     updatedAt: new Date()
  }
