@@ -37,9 +37,6 @@ module.exports = {
           key: 'id'
         }
       },
-      review_id: {
-        type: Sequelize.INTEGER
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

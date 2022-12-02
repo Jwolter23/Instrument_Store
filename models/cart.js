@@ -23,7 +23,10 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Cart.init({
-    userId: {
+  
+    items: DataTypes.STRING,
+    subtotal: DataTypes.FLOAT,
+    user_id: {
       type: Sequelize.INTEGER,
       allowNull: false,
       field: 'user_id',
@@ -33,10 +36,6 @@ module.exports = (sequelize, DataTypes) => {
         key: 'id'
       }
     },
-    items: DataTypes.STRING,
-    subtotal: DataTypes.FLOAT,
-    user_id: DataTypes.INTEGER,
-    instrument_id: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Cart',

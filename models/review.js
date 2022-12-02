@@ -23,7 +23,9 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Review.init({
-    userId: {
+    username: DataTypes.STRING,
+    content: DataTypes.STRING,
+    user_id: {
       type: Sequelize.INTEGER,
       allowNull: false,
       field: 'user_id',
@@ -33,20 +35,16 @@ module.exports = (sequelize, DataTypes) => {
         key: 'id'
       }
     },
-    instrumentId: {
+    instrument_id: {
       type: Sequelize.INTEGER,
       allowNull: false,
-      field: 'user_id',
+      field: 'instrument_id',
       onDelete: 'CASCADE',
       references: {
         model: 'instruments',
         key: 'id'
       }
     },
-    username: DataTypes.STRING,
-    content: DataTypes.STRING,
-    user_id: DataTypes.INTEGER,
-    instrument_id: DataTypes.INTEGER,
     rating: DataTypes.INTEGER
   }, {
     sequelize,

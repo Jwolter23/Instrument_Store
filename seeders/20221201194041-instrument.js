@@ -13,7 +13,6 @@ module.exports = {
         color: 'White',
         price: 5799.00,
         cart_id: 1,
-        review_id: 1,
         createdAt: new Date(),
         updatedAt: new Date()
      },
@@ -26,7 +25,6 @@ module.exports = {
        color: 'Cherry',
        price: 1999.00,
        cart_id: 2,
-       review_id: 2,
        createdAt: new Date(),
        updatedAt: new Date()
       },
@@ -39,7 +37,6 @@ module.exports = {
         color: 'Sixties Cherry',
         price: 3499.00,
        cart_id: 3,
-       review_id: 3,
        createdAt: new Date(),
        updatedAt: new Date()
       },
