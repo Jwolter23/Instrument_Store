@@ -23,7 +23,13 @@ module.exports = (sequelize, DataTypes) => {
     }
   }
   Instrument.init({
-    cartId: {
+    brand: DataTypes.STRING,
+    type: DataTypes.STRING,
+    model: DataTypes.STRING,
+    image: DataTypes.STRING,
+    color: DataTypes.STRING,
+    price: DataTypes.FLOAT,
+    cart_id:{
       type: Sequelize.INTEGER,
       allowNull: false,
       field: 'cart_id',
@@ -33,14 +39,6 @@ module.exports = (sequelize, DataTypes) => {
         key: 'id'
       }
     },
-    brand: DataTypes.STRING,
-    type: DataTypes.STRING,
-    model: DataTypes.STRING,
-    image: DataTypes.STRING,
-    color: DataTypes.STRING,
-    price: DataTypes.FLOAT,
-    cart_id: DataTypes.INTEGER,
-    review_id: DataTypes.INTEGER
   }, {
     sequelize,
     modelName: 'Instrument',

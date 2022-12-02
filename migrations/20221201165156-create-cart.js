@@ -25,9 +25,6 @@ module.exports = {
           key: 'id'
         }
       },
-      instrument_id: {
-        type: Sequelize.INTEGER
-      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
