@@ -28,7 +28,7 @@ module.exports = {
       instrument_id: {
         type: Sequelize.INTEGER,
         allowNull: false,
-        field: 'user_id',
+        field: 'instrument_id',
         onDelete: 'CASCADE',
         references: {
           model: 'instruments',
