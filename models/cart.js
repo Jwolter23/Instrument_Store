@@ -1,7 +1,5 @@
-'use strict';
-const {
-  Model
-} = require('sequelize');
+"use strict";
+const { Model, Sequelize } = require("sequelize");
 module.exports = (sequelize, DataTypes) => {
   class Cart extends Model {
     /**
@@ -11,35 +9,37 @@ module.exports = (sequelize, DataTypes) => {
      */
     static associate(models) {
       Cart.belongsTo(models.User, {
-        foreignKey: 'user_id',
-        onDelete: 'CASCADE',
-        onUpdate: 'CASCADE'
+        foreignKey: "user_id",
+        onDelete: "CASCADE",
+        onUpdate: "CASCADE",
       }),
-      Cart.hasMany(models.Instrument, {
-        foreignKey: 'instrument_id',
-        onDelete: 'CASCADE',
-        onUpdate: 'CASCADE'
-      })
+        Cart.hasMany(models.Instrument, {
+          foreignKey: "instrument_id",
+          onDelete: "CASCADE",
+          onUpdate: "CASCADE",
+        });
     }
   }
-  Cart.init({
-  
-    items: DataTypes.STRING,
-    subtotal: DataTypes.FLOAT,
-    user_id: {
-      type: Sequelize.INTEGER,
-      allowNull: false,
-      field: 'user_id',
-      onDelete: 'CASCADE',
-      references: {
-        model: 'users',
-        key: 'id'
-      }
+  Cart.init(
+    {
+      items: DataTypes.STRING,
+      subtotal: DataTypes.FLOAT,
+      user_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        field: "user_id",
+        onDelete: "CASCADE",
+        references: {
+          model: "users",
+          key: "id",
+        },
+      },
     },
-  }, {
-    sequelize,
-    modelName: 'Cart',
-    tableName: 'carts'
-  });
+    {
+      sequelize,
+      modelName: "Cart",
+      tableName: "carts",
+    }
+  );
   return Cart;
 };
