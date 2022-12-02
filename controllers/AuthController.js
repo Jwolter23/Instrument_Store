@@ -1,4 +1,4 @@
-const { User } = require("../models/user.js");
+const { User } = require("../models");
 const middleware = require("../middleware");
 
 const Login = async (req, res) => {
