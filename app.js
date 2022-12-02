@@ -3,6 +3,9 @@ const cors = require('cors')
 const logger = require('morgan')
 const AuthRouter = require('./routes/AuthRouter')
 const PostRouter = require('./routes/PostRouter')
+const AppRouter = require('./routes/AppRouter')
+
+
 
 const PORT = process.env.PORT || 3001
 
@@ -18,6 +21,7 @@ app.use(express.urlencoded({extended: true}))
 app.use('/auth', AuthRouter)
 app.use('/posts', PostRouter)
 
+app.use('/api', AppRouter)
 
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`))
