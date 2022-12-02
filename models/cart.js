@@ -22,7 +22,7 @@ module.exports = (sequelize, DataTypes) => {
   }
   Cart.init(
     {
-      items: DataTypes.STRING,
+      items: DataTypes.ARRAY(DataTypes.STRING),
       subtotal: DataTypes.FLOAT,
       user_id: {
         type: Sequelize.INTEGER,
