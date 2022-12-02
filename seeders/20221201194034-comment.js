@@ -10,7 +10,7 @@ module.exports = {
           username: 'User101',
           content: 'This is the best website I have ever been on',
           likes: 12,
-          user_id: 1,
+          user_id: 4,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -18,7 +18,7 @@ module.exports = {
           username: 'User202',
           content: 'This website is alright',
           likes: 7,
-          user_id: 2,
+          user_id: 5,
           createdAt: new Date(),
           updatedAt: new Date()
         },
@@ -26,7 +26,7 @@ module.exports = {
           username: 'User303',
           content: 'This website is horrible I hate it',
           likes: 3,
-          user_id: 3,
+          user_id: 6,
           createdAt: new Date(),
           updatedAt: new Date()
         }
