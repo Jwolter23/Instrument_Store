@@ -21,19 +21,19 @@ const Register = () => {
     e.preventDefault();
 
     await RegisterUser({
+      username: formValues.username,
+      password: formValues.password,
       firstName: formValues.firstName,
       lastName: formValues.lastName,
-      username: formValues.username,
       email: formValues.email,
-      password: formValues.password,
     });
 
     setFormValues({
+      username: "",
+      confirmPassword: "",
       firstName: "",
       lastName: "",
-      username: "",
       email: "",
-      confirmPassword: "",
     });
     navigate("/signin");
   };
