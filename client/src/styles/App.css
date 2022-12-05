@@ -219,6 +219,10 @@ form button:disabled {
   border-radius: 40px;
   text-align: center;
 }
+.category:hover {
+  transform: scale(1.05 );
+  border: #e06666 solid 3px;
+}
 
 .instrument {
     width: 100%;
@@ -230,6 +234,10 @@ form button:disabled {
     border-radius: 40px;
     text-align: center;
   }
+  .instrument:hover {
+    transform: scale(1.05 );
+    border: #e06666 solid 3px;
+  }
 
   .instrument-image {
     margin-top: 2em;
@@ -238,7 +246,4 @@ form button:disabled {
   }
 
 
-.category:hover {
-  transform: scale(1.05 );
-  border: #e06666 solid 3px;
-}
+
