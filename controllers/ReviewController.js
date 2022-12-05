@@ -69,5 +69,5 @@ module.exports = {
   // getAllReviews,
   AddReview,
   // UpdateReview,
-//   DeleteComment
+//   DeleteReview
 }
