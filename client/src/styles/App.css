@@ -192,11 +192,12 @@ form button:disabled {
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(100px, 1fr));
+  grid-template-columns: repeat(3, minmax(100px, 1fr));
   grid-gap: 5em;
   margin-top: 5em;
   margin-left: 5em;
   margin-right: 5em;
+  margin-bottom: 10em;
 }
 
 .category  {
