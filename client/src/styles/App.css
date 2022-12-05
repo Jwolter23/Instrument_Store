@@ -66,6 +66,15 @@ font-size:36px;
 font-size:36px;
 -webkit-text-stroke: 1px blue;
 }
+.nav-item4{
+  font-size: 24px;
+  color: white;
+  -webkit-text-stroke: 1px black;
+}
+.nav-item4:hover {
+font-size:36px;
+-webkit-text-stroke: 1px blue;
+}
 
 .footer-container {
   position: fixed;

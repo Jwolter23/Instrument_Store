@@ -10,6 +10,7 @@ const {Review} = require('../models')
 
 
 
+
 const getAllReviews = async (req, res) => {
   try{
     const review = await Review.findAll()
@@ -64,8 +65,7 @@ const DeleteReview = async (req, res) => {
 }
 
 module.exports = {
-
-  
-  // UpdateReview,
-//   DeleteComment
+  // GetReviewDetails,
+  // getAllReviews,
+  AddReview,
 }
