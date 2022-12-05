@@ -29,7 +29,7 @@ module.exports = {
       },
       cart_id: {
         type: Sequelize.INTEGER,
-        allowNull: false,
+        allowNull: true,
         field: 'cart_id',
         onDelete: 'CASCADE',
         references: {
