@@ -14,6 +14,19 @@ const Welcome = ({ authenticated,user, handleLogOut }) => {
     )
     console.log(user)
   }
+  if (user && user.username ==="admin") {
+    authenticatedOptions = (
+      <nav className='login-options'>
+        <h3>Welcome Administrator!!</h3>
+        <Link to="/admin" className='login'>Admin Panel</Link>
+        <Link to="/cart" className='login'>Cart</Link>
+        <Link onClick={handleLogOut} className="login" to="/">
+          Sign Out
+        </Link>
+      </nav>
+    )
+    console.log(user)
+  }
 
   const publicOptions = (
     <nav className='login-options'>

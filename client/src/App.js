@@ -38,7 +38,12 @@ function App() {
         />
       </header>
       <main className="App-main">
-        <Main setUser={setUser} toggleAuthenticated={toggleAuthenticated} />
+        <Main
+          setUser={setUser}
+          toggleAuthenticated={toggleAuthenticated}
+          user={user}
+          authenticated={authenticated}
+        />
       </main>
       <footer className="App-footer">
         <Footer />
