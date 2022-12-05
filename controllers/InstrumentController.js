@@ -8,9 +8,6 @@ const {Instrument} = require('../models')
 // Completed 
 
 
-
-
-
 const getAllInstruments = async (req, res) => {
   try{
     const instrument = await Instrument.findAll()
