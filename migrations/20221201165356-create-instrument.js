@@ -37,6 +37,16 @@ module.exports = {
           key: 'id'
         }
       },
+      instrument_id: {
+        type: Sequelize.INTEGER,
+        allowNull: false,
+        field: 'instrument_id',
+        onDelete: 'CASCADE',
+        references: {
+          model: 'instruments',
+          key: 'id'
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

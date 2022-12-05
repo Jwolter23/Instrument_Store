@@ -10,6 +10,7 @@ const {Instrument} = require('../models')
 
 
 
+
 const getAllInstruments = async (req, res) => {
   try{
     const instrument = await Instrument.findAll()
@@ -19,54 +20,54 @@ const getAllInstruments = async (req, res) => {
   }
 }
 
-// const GetCommentDetails = async (req, res) => {
-//   try {
-//     const comment = await Comment.findByPk(req.params.comment_id)
-//     res.send(comment)
-//   } catch (error) {
-//     throw error
-//   }
-// }
+const GetInstrumentDetails = async (req, res) => {
+  try {
+    const review = await Review.findByPk(req.params.review_id)
+    res.send(review)
+  } catch (error) {
+    throw error
+  }
+}
 
-// const AddComment = async (req, res) => {
-//   try {
-//     let userId = parseInt(req.params.user_id)
-//     let postId = parseInt(req.params.user_id)
-//     let commentBody = {userId, postId, ...req.body}
-//     let comment = await Comment.create(commentBody)
-//     res.send(comment)
-//   } catch (error) {
-//     throw error
-//   }
-// }
+const AddInstrument = async (req, res) => {
+  try {
+    let userId = parseInt(req.params.user_id)
+    let reviewId = parseInt(req.params.review_id)
+    let reviewBody = {userId, reviewId, ...req.body}
+    let review = await Review.create(reviewBody)
+    res.send(review)
+  } catch (error) {
+    throw error
+  }
+}
 
-// const UpdateComment = async (req, res) => {
-//   try {
-//     let commentId = parseInt(req.params.comment_id)
-//     let updatedComment = await Comment.update(req.body, {
-//       where: {id: commentId},
-//       returning: true 
-//     })
-//     res.send(updatedComment)
-//   } catch (error) {
-//     throw error
-//   }
-// }
+const UpdateInstrument = async (req, res) => {
+  try {
+    let reviewId = parseInt(req.params.review_id)
+    let updatedReview = await Review.update(req.body, {
+      where: {id: reviewId},
+      returning: true 
+    })
+    res.send(updatedReview)
+  } catch (error) {
+    throw error
+  }
+}
 
-// const DeleteComment = async (req, res) => {
-//   try {
-//     let commentId = parseInt(req.params.comment_id)
-//     await Comment.destroy({where: {id: commentId} })
-//     res.send({message: `Deleted review with an id of ${commentId}`})
-//   } catch (error) {
-//     throw error
-//   }
-// }
+const DeleteInstrument = async (req, res) => {
+  try {
+    let reviewId = parseInt(req.params.review_id)
+    await Review.destroy({where: {id: reviewId} })
+    res.send({message: `Deleted review with an id of ${reviewId}`})
+  } catch (error) {
+    throw error
+  }
+}
 
 module.exports = {
-//   GetCommentDetails,
+  // GetInstrumentDetails,
   getAllInstruments,
-//   AddComment,
-//   UpdateComment,
-//   DeleteComment
+//   AddInstrument,
+  // UpdateInstrument,
+//   DeleteInstrument
 }
