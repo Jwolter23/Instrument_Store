@@ -6,15 +6,16 @@ import AdminPanel from "./AdminPanel"
 import Categories from "./Categories"
 import Register from "./Register"
 import SignIn from "./SignIn"
+import Electric from "./Electric"
 
 export default function Main(props) {
     const [instruments, setInstruments] = useState([])
 
   useEffect(() => {
     const getInstruments = async () => {
-      const res = await axios.get(`http://localhost:3001/view`)
-      setInstruments(res.data.instruments)
-      console.log(res.data.instruments)
+      const res = await axios.get(`http://localhost:3001/api/instruments/view`)
+      setInstruments(res.data)
+      console.log(res.data)
     }
     getInstruments()
   }, [])
@@ -30,6 +31,8 @@ export default function Main(props) {
                         user={props.user}
                         authenticated={props.authenticated}/>}/>
                 <Route exact path="/categories" element={<Categories/>}/>
+                <Route exact path="/electric" element={<Electric
+                instruments={instruments}/>}/>
             </Routes>
         </div>
     )
