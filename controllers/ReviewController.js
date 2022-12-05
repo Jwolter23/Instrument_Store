@@ -68,4 +68,6 @@ module.exports = {
   // GetReviewDetails,
   // getAllReviews,
   AddReview,
+// UpdateReview,
+//   DeleteReview
 }
