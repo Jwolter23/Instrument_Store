@@ -1,8 +1,8 @@
 import Client from "./api";
 
-export const GetPosts = async () => {
+export const createComment = async (data) => {
   try {
-    const res = await Client.get("/posts");
+    const res = await Client.post("/comments");
     return res.data;
   } catch (error) {
     throw error;

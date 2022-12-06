@@ -1,5 +1,7 @@
 import { useState,useEffect } from "react"
 import axios from "axios"
+import CreateComment from "./CreateComment"
+
 export default function Comments () {
 
     const [comments, setComments] =useState(null)
@@ -24,6 +26,7 @@ export default function Comments () {
     } else {
         return (
             <div className="comment-container">
+                <CreateComment comment={comments} />
             <div className="comments">
                 <div className="comment1">
                     <h2>{comments[0].username}</h2>
@@ -51,3 +54,4 @@ export default function Comments () {
     }
     
 }
+
