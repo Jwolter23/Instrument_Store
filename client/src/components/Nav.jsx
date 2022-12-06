@@ -13,8 +13,11 @@ export default function Nav () {
            <Link to="/about">
                <h2 className="nav-item3">About</h2>
            </Link>
+           <Link to="comments">
+               <h2 className="nav-item4">Comments</h2>
+           </Link>
            <Link onClick={(e)=> navigate(-1)}>
-               <h2 className="nav-item4">Back</h2>
+               <h2 className="nav-item5">Back</h2>
            </Link>
        </div>
     )
