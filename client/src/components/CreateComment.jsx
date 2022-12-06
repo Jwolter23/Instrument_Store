@@ -2,16 +2,16 @@ import React from "react"
 import axios from "axios"
 import { useState } from "react"
 
-export default function CreateComment({ comment }) {
+export default function CreateComment({ user }) {
   const [content, setContent] = useState({
-    user_id: 6,
-    username: comment.username,
+    user_id: user.id, 
+    username: user.username,
     content: "",
   })
-
+  console.log(user)
   const handleChange = (e) => {
     setContent({ ...content, [e.target.id]: e.target.value })
-    console.log(comment)
+    console.log(user)
   }
 
   const handleSubmit = async (event) => {
@@ -20,7 +20,7 @@ export default function CreateComment({ comment }) {
     console.log(content)
 
     await axios
-      .post(`http://localhost:3001/api/comments/${comment.id}`, content)
+      .post(`http://localhost:3001/api/comments/${user.id}`, content)
       .then((res) => {
         console.log(res)
         console.log(res.data)
