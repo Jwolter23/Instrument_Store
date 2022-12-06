@@ -15,9 +15,11 @@ import Amplifiers from "./Amplifiers"
 import PedalsAndEffects from "./PedalsAndEffects"
 import Everything from "./Everything"
 
+
+
 export default function Main(props) {
     const [instruments, setInstruments] = useState([])
-
+  console.log(props.user)
   useEffect(() => {
     const getInstruments = async () => {
       const res = await axios.get(`http://localhost:3001/api/instruments/view`)
@@ -53,7 +55,7 @@ export default function Main(props) {
                 instruments={instruments}/>}/>
                 <Route exact path="/pedalsandeffects" element={<PedalsAndEffects
                 instruments={instruments}/>}/>
-                <Route exact path="/comments" element={<Comments/>} />
+                <Route exact path="/comments" element={<Comments user={props.user} />} />
             </Routes>
         </div>
     )

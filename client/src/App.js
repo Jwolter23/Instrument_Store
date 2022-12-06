@@ -20,6 +20,7 @@ function App() {
     const user = await CheckSession();
     setUser(user);
     toggleAuthenticated(true);
+    console.log(user)
   };
   useEffect(() => {
     const token = localStorage.getItem("token");
