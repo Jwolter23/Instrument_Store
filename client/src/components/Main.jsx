@@ -10,6 +10,9 @@ import Electric from "./Electric"
 import Comments from "./Comments"
 import Acoustic from "./Acoustic"
 import About from "./About"
+import Bass from "./Bass"
+import Amplifiers from "./Amplifiers"
+import PedalsAndEffects from "./PedalsAndEffects"
 
 export default function Main(props) {
     const [instruments, setInstruments] = useState([])
@@ -38,6 +41,12 @@ export default function Main(props) {
                 <Route exact path="/electric" element={<Electric
                 instruments={instruments}/>}/>
                 <Route exact path="/acoustic" element={<Acoustic
+                instruments={instruments}/>}/>
+                <Route exact path="/bass" element={<Bass
+                instruments={instruments}/>}/>
+                <Route exact path="/amps" element={<Amplifiers
+                instruments={instruments}/>}/>
+                <Route exact path="/pedalsandeffects" element={<PedalsAndEffects
                 instruments={instruments}/>}/>
                 <Route exact path="/comments" element={<Comments/>} />
             </Routes>
