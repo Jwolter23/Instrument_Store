@@ -8,6 +8,8 @@ import Register from "./Register"
 import SignIn from "./SignIn"
 import Electric from "./Electric"
 import Comments from "./Comments"
+import Acoustic from "./Acoustic"
+import About from "./About"
 
 export default function Main(props) {
     const [instruments, setInstruments] = useState([])
@@ -31,8 +33,11 @@ export default function Main(props) {
                 <Route exact path="/admin"  element={<AdminPanel           
                         user={props.user}
                         authenticated={props.authenticated}/>}/>
+                <Route exact path="/about" element={<About/>}/>
                 <Route exact path="/categories" element={<Categories/>}/>
                 <Route exact path="/electric" element={<Electric
+                instruments={instruments}/>}/>
+                <Route exact path="/acoustic" element={<Acoustic
                 instruments={instruments}/>}/>
                 <Route exact path="/comments" element={<Comments/>} />
             </Routes>
