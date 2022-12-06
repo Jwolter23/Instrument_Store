@@ -65,8 +65,8 @@ const DeleteComment = async (req, res) => {
 }
 
 module.exports = {
-  GetCommentDetails,
-  // getAllComments,
+  // GetCommentDetails,
+  getAllComments,
   // AddComment,
 // UpdateComment,
 //   DeleteComment
