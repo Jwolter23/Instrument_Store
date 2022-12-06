@@ -32,7 +32,7 @@ const GetReviewDetails = async (req, res) => {
 const AddReview = async (req, res) => {
   try {
     let userId = parseInt(req.params.user_id)
-    let reviewId = parseInt(req.params.review_id)
+    let reviewId = parseInt(req.params.user_id)
     let reviewBody = {userId, reviewId, ...req.body}
     let review = await Review.create(reviewBody)
     res.send(review)
