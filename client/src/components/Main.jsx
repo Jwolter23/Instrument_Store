@@ -13,6 +13,7 @@ import About from "./About"
 import Bass from "./Bass"
 import Amplifiers from "./Amplifiers"
 import PedalsAndEffects from "./PedalsAndEffects"
+import Everything from "./Everything"
 
 export default function Main(props) {
     const [instruments, setInstruments] = useState([])
@@ -45,6 +46,8 @@ export default function Main(props) {
                 <Route exact path="/bass" element={<Bass
                 instruments={instruments}/>}/>
                 <Route exact path="/amps" element={<Amplifiers
+                instruments={instruments}/>}/>
+                <Route exact path="/all" element={<Everything
                 instruments={instruments}/>}/>
                 <Route exact path="/pedalsandeffects" element={<PedalsAndEffects
                 instruments={instruments}/>}/>
