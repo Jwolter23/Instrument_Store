@@ -14,7 +14,7 @@ const {Comment} = require('../models')
 const getAllComments = async (req, res) => {
   try{
     const comment = await Comment.findAll()
-    res.send(review)
+    res.send(comment)
   } catch (error) {
     throw error
   }
@@ -22,7 +22,7 @@ const getAllComments = async (req, res) => {
 
 const GetCommentDetails = async (req, res) => {
   try {
-    const comment = await Review.findByPk(req.params.comment_id)
+    const comment = await Comment.findByPk(req.params.user_id)
     res.send(comment)
   } catch (error) {
     throw error
@@ -32,7 +32,7 @@ const GetCommentDetails = async (req, res) => {
 const AddComment = async (req, res) => {
   try {
     let userId = parseInt(req.params.user_id)
-    let commentId = parseInt(req.params.comment_id)
+    let commentId = parseInt(req.params.user_id)
     let commentBody = {userId, commentId, ...req.body}
     let comment = await Comment.create(commentBody)
     res.send(comment)
@@ -65,9 +65,9 @@ const DeleteComment = async (req, res) => {
 }
 
 module.exports = {
-  // GetCommentDetails,
+  GetCommentDetails,
   // getAllComments,
-  AddComment,
+  // AddComment,
 // UpdateComment,
 //   DeleteComment
 }
