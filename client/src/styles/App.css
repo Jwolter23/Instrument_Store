@@ -76,6 +76,16 @@ font-size:36px;
 -webkit-text-stroke: 1px blue;
 }
 
+.nav-item5{
+  font-size: 24px;
+  color: white;
+  -webkit-text-stroke: 1px black;
+}
+.nav-item5:hover {
+font-size:36px;
+-webkit-text-stroke: 1px blue;
+}
+
 .footer-container {
   position: fixed;
   left: 0;

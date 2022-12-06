@@ -13,29 +13,26 @@ module.exports = {
         rating: 5,
         createdAt: new Date(),
         updatedAt: new Date(),
-        
       },
       {
         username: "PianoPlayer42",
         content: "I am not a huge fan of this instrument",
-        user_id: 2,
+        user_id: 1,
         instrument_id: 2,
         review_id: 2,
         rating: 1,
         createdAt: new Date(),
         updatedAt: new Date(),
-        
       },
       {
         username: "DrumsPlayer3",
         content: "THIS INSTRUMENT ROCKS",
-        user_id: 3,
+        user_id: 1,
         instrument_id: 3,
         review_id: 3,
         rating: 4,
         createdAt: new Date(),
         updatedAt: new Date(),
-        
       },
     ]);
   },
