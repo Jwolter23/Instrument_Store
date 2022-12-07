@@ -2,11 +2,13 @@ import { useState,useEffect } from "react"
 import axios from "axios"
 import CreateComment from "./CreateComment"
 import { useNavigate } from "react-router"
-import { DeleteComment } from "./DeleteComment"
+// import { DeleteComment } from "./DeleteComment"
+
 
 
 export default function Comments ({user},{DeleteComment}) {
     let navigate = useNavigate()
+
 
 
       function navComment () {
@@ -44,7 +46,7 @@ console.log(user)
                         <div key={comment.name}>
                             <h2>{comment.username}</h2>
                             <button className="edit-comment-button" onClick={navComment}>Edit</button>
-                            <button className="delete-comment-button" onClick={DeleteComment}>Delete</button>
+                            {/* <button className="delete-comment-button" onClick={DeleteComment}>Delete</button> */}
                             <h3>{comment.content}</h3>
                             <h4>likes: {comment.likes}</h4>
                         </div>
