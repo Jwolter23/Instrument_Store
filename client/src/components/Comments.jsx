@@ -46,8 +46,24 @@ console.log(user)
                     comments.map((comment) => (
                         <div key={comment.name}>
                             <h2>{comment.username}</h2>
-                            <button className="edit-comment-button" onClick={navComment}>Edit</button>
-                            <button className="delete-comment-button" onClick={DeleteComment}>Delete</button>
+
+                            {
+                                (comment.username === user.username) 
+                                ?                             
+                                <button className="edit-comment-button" onClick={navComment}>Edit</button>
+                                :
+                                 null
+                            }
+                            {
+                                (comment.username === user.username) 
+                                ?
+                                <button className="delete-comment-button" onClick={DeleteComment}>Delete</button>
+                                :
+                                null
+                            }
+                            
+                            {/* <button className="delete-comment-button" onClick={DeleteComment}>Delete</button> */}
+
                             <h3>{comment.content}</h3>
                             <h4>likes: {comment.likes}</h4>
                         </div>
@@ -74,6 +90,8 @@ console.log(user)
                     <h3>{comments[3].content}</h3>
                     <h4>Likes: {comments[3].likes}</h4>
                 </div> */}
+
+                {/* {(user.id === comments.id) ? <DeleteComment user={user} comment={comments.id}/> : null} */}
             </div>
         </div>
         )
