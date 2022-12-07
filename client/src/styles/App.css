@@ -1,6 +1,7 @@
 .header {
   display: flex;
   flex-direction: column;
+  background-color: #dfe0df;
 }
 
 .header-text {
@@ -31,7 +32,7 @@
 .nav {
 display: flex;
 flex-direction: row;
-background-image: linear-gradient(rgb(0,145,255),rgb(0, 170, 255));
+background-color: #a88c66;
 justify-content: space-evenly;
 height:40px;
 align-items: center;
@@ -102,7 +103,7 @@ font-size:36px;
   justify-content:left;
   padding-left: 50px;
   padding-right:50px;
-  background-image: linear-gradient(rgb(0,145,255),rgb(0, 170, 255));
+  background-color: #a88c66;
   align-items: center;
   border-bottom: 2px solid black;
   height: 50px;
@@ -125,7 +126,7 @@ font-size:36px;
 }
 
 .what-is:hover + .what-is-desc {
-  color: #C25B80;
+  color: #daa753;
   transition: linear 2s; 
   opacity: 100;
 }
@@ -137,8 +138,8 @@ font-size:36px;
 }
 
 .who-made:hover + .who-made-desc {
-  color: #C25B80;
-  background-color:#415374 ;
+  color: #daa753;
+  background-color: black;
   transition: ease-in 1s;
   opacity: 100;
   font-size: 40px;
@@ -223,7 +224,7 @@ form button:disabled {
   width: 100%;
   height: initial;
   object-fit: center;
-  box-shadow: inset 0 0 3em #e06666;
+  box-shadow: inset 0 0 3em #daa753;
   padding-bottom: 2em;
   border: 3px solid black;
   border-radius: 40px;
@@ -238,7 +239,7 @@ form button:disabled {
     width: 100%;
     height: initial;
     object-fit: center;
-    box-shadow: inset 0 0 3em #e06666;
+    box-shadow: inset 0 0 3em #daa753;
     padding-bottom: 2em;
     border: 3px solid black;
     border-radius: 40px;
@@ -246,7 +247,7 @@ form button:disabled {
   }
   .instrument:hover {
     transform: scale(1.05 );
-    border: #e06666 solid 3px;
+    border: #daa753 solid 3px;
   }
 
   .instrument-image {
