@@ -15,6 +15,7 @@ import Amplifiers from "./Amplifiers"
 import PedalsAndEffects from "./PedalsAndEffects"
 import Everything from "./Everything"
 import EditComment from "./EditComment"
+import DeleteComment from "./DeleteComment"
 
 
 
@@ -57,7 +58,8 @@ export default function Main(props) {
                 <Route exact path="/pedalsandeffects" element={<PedalsAndEffects
                 instruments={instruments}/>}/>
                 <Route exact path="/comments" element={<Comments user={props.user} />} />
-                <Route exact path="/comments/:id" element={<EditComment  user={props.user}/>}/> 
+                <Route exact path="/comments/:id" element={<EditComment  user={props.user}/>}/>
+                <Route exact path="/comments/:id" element={<DeleteComment  user={props.user}/>}/> 
             </Routes>
         </div>
     )

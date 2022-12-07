@@ -7,6 +7,6 @@ Router.get("/view", controller.getAllComments);
 Router.post("/:user_id", controller.AddComment);
 
 Router.put("/:comment_id", controller.UpdateComment);
-// Router.delete('/:review_id', controller.DeleteComment)
+Router.delete('/:review_id', controller.DeleteComment)
 
 module.exports = Router;
