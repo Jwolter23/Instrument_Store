@@ -9,12 +9,12 @@
   display: flex;
   width: fit-content;
   align-self: center;
-  -webkit-text-stroke: 2px rgb(11, 60, 208);
+  -webkit-text-stroke: 2px rgb(47,72,88,1);
   color: white;
 }
 
 .header-text:hover {
-  text-shadow: 0px 5px 5px rgb(56, 21, 173);
+  text-shadow: 0px 5px 5px rgb(2,0,36,1);
 }
 
 .header-nav {
