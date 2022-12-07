@@ -3,6 +3,7 @@ import axios from "axios"
 import CreateComment from "./CreateComment"
 import { useNavigate } from "react-router"
 import DeleteComment  from "./DeleteComment"
+import SignIn from "./SignIn"
 
 
 
@@ -35,7 +36,11 @@ console.log(user)
     }, [])
     if (!comments){
         return <h2>Loading... Please Wait</h2>
-    } else {
+    }
+    if (!user) {
+        return <div><h2>Please Log in</h2><SignIn user={user}/></div>
+    }
+     else {
         return (
             <div className="comment-container">
                 <CreateComment user={user} />
@@ -61,37 +66,12 @@ console.log(user)
                                 :
                                 null
                             }
-                            
-                            {/* <button className="delete-comment-button" onClick={DeleteComment}>Delete</button> */}
-
                             <h3>{comment.content}</h3>
                             <h4>likes: {comment.likes}</h4>
                         </div>
                     ))
                    }
                 </div>
-                {/* <div className="comment1">
-                    <h2>{comments[0].username}</h2>
-                    <h3>{comments[0].content}</h3>
-                    <h4>Likes: {comments[0].likes}</h4>
-                </div>
-                <div className="comments2">
-                    <h2>{comments[1].username}</h2>
-                    <h3>{comments[1].content}</h3>
-                    <h4>Likes: {comments[1].likes}</h4>
-                </div>
-                <div className="comments3">
-                    <h2>{comments[2].username}</h2>
-                    <h3>{comments[2].content}</h3>
-                    <h4>Likes: {comments[2].likes}</h4>
-                </div>
-                <div className="comments4">
-                    <h2>{comments[3].username}</h2>
-                    <h3>{comments[3].content}</h3>
-                    <h4>Likes: {comments[3].likes}</h4>
-                </div> */}
-
-                {/* {(user.id === comments.id) ? <DeleteComment user={user} comment={comments.id}/> : null} */}
             </div>
         </div>
         )
