@@ -1,8 +1,10 @@
 import React from "react"
 import axios from "axios"
 import { useState } from "react"
+import { useNavigate } from "react-router-dom";
 
 export default function CreateComment({ user }) {
+    let navigate = useNavigate();
   const [content, setContent] = useState({
     user_id: user.id, 
     username: user.username,
@@ -25,6 +27,7 @@ export default function CreateComment({ user }) {
         console.log(res)
         console.log(res.data)
       })
+      navigate("/comments")
   }
 
   return (
