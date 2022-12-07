@@ -221,6 +221,8 @@ form button:disabled {
 }
 
 .category  {
+  display: flex;
+  flex-direction: column;
   width: 100%;
   height: initial;
   object-fit: center;
@@ -228,7 +230,7 @@ form button:disabled {
   padding-bottom: 2em;
   border: 3px solid black;
   border-radius: 40px;
-  text-align: center;
+  align-items: center;
 }
 .category:hover {
   transform: scale(1.05 );
