@@ -2,11 +2,11 @@ import { useState,useEffect } from "react"
 import axios from "axios"
 import CreateComment from "./CreateComment"
 import { useNavigate } from "react-router"
-// import { DeleteComment } from "./DeleteComment"
+import DeleteComment  from "./DeleteComment"
 
 
 
-export default function Comments ({user},{DeleteComment}) {
+export default function Comments ({user}) {
     let navigate = useNavigate()
 
 
@@ -39,12 +39,14 @@ console.log(user)
         return (
             <div className="comment-container">
                 <CreateComment user={user} />
+                {/* <DeleteComment user={user} /> */}
             <div className="comments">
                 <div className="new-comments">
                    {
                     comments.map((comment) => (
                         <div key={comment.name}>
                             <h2>{comment.username}</h2>
+
                             {
                                 (comment.username === user.username) 
                                 ?                             
@@ -61,6 +63,7 @@ console.log(user)
                             }
                             
                             {/* <button className="delete-comment-button" onClick={DeleteComment}>Delete</button> */}
+
                             <h3>{comment.content}</h3>
                             <h4>likes: {comment.likes}</h4>
                         </div>

@@ -4,7 +4,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom";
 import {Comments} from "./Comments";
 
-export default function DeleteComment ({user}, {Comments}) {
+export default function DeleteComment ({user}) {
     let navigate = useNavigate();
   const [content, setContent] = useState({
     user_id: user.id, 
@@ -34,21 +34,13 @@ export default function DeleteComment ({user}, {Comments}) {
   return (
     <div className="create-comment-container">
       <form onSubmit={handleSubmit}>
-        <input
-          className="content-section"
-          id="content"
-          type="text"
-          placeholder=""
-          autoComplete="off"
-          onChange={handleChange}
-          value={content[""]}
-        />
+      
       
         <button
           className="post button"
           type="submit"
         >
-          Post
+          Delete
         </button>
       </form>
     </div>
