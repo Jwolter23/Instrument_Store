@@ -1,20 +1,21 @@
 import { useState,useEffect } from "react"
 import axios from "axios"
 import CreateComment from "./CreateComment"
-import EditComment from "./EditComment"
 import { useNavigate } from "react-router"
 // import { DeleteComment } from "./DeleteComment"
 
 
-export default function Comments ({user}) {
+
+export default function Comments ({user},{DeleteComment}) {
+    let navigate = useNavigate()
+
+
 
       function navComment () {
         navigate(`/comments/${user.id}`)
     }
 
     
-    
-    let navigate = useNavigate()
 console.log(user)
     const [comments, setComments] =useState(null)
 
