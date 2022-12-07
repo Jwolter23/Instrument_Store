@@ -2,6 +2,7 @@ export default function Everything (props) {
 console.log(props)
 
 const Instrument = (props) => {
+    
     return  (
         <div className="instrument">
         <h3>{props.instrument.brand}</h3>
@@ -15,13 +16,40 @@ const Instrument = (props) => {
 }
 
 
-
 return (
     <div className="grid">
-        {props.instruments.map((instrument) => (
-            <Instrument instrument={instrument}/>
-        ))}
+        {props.instruments.map((instrument) =>{
+            let instruments = props.instruments
+            let length = instruments.length
+            if (length === 0) {
+                return (
+                    <div>
+                        <h1>Loading Please Wait...</h1>
+                    </div>
+                )
+            } else return (
+                <Instrument instrument={instrument}/>
+            )
+        })}
     </div>
 )
+// return (
+//     <div className="grid">
+//         {props.instruments.map((instrument) => {
+//                 let instruments = props.instruments
+//                 let length = instruments.length
+//                 if (length === 0  ) {
+//                 return (
+//                     <div>
+//                         <h1>Loading Please Wait...</h1>
+//                     </div>
+//                 )
+//                 } else {  
+//         (
+//             <Instrument instrument={instrument}/>
+//         )}
+//     )}
+//     </div>
+// )
 
-}
+ }
