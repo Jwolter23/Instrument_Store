@@ -43,7 +43,7 @@ export default function Main(props) {
                         user={props.user}
                         authenticated={props.authenticated}/>}/>
                 <Route exact path="/about" element={<About/>}/>
-                <Route exact path="/categories" element={<Categories/>}/>
+                <Route exact path="/categories" element={<Categories instruments={instruments}/>}/>
                 <Route exact path="/electric" element={<Electric
                 instruments={instruments}/>}/>
                 <Route exact path="/acoustic" element={<Acoustic
