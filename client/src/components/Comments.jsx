@@ -1,9 +1,17 @@
 import { useState,useEffect } from "react"
 import axios from "axios"
 import CreateComment from "./CreateComment"
+import EditComment from "./EditComment"
+import { useNavigate } from "react-router"
 
 
 export default function Comments ({user}) {
+
+      function navComment () {
+        navigate(`/comments/${user.id}`)
+    }
+
+    let navigate = useNavigate()
 console.log(user)
     const [comments, setComments] =useState(null)
 
@@ -21,7 +29,6 @@ console.log(user)
         }
         getComments()
     }, [])
-
     if (!comments){
         return <h2>Loading... Please Wait</h2>
     } else {
@@ -34,6 +41,7 @@ console.log(user)
                     comments.map((comment) => (
                         <div key={comment.name}>
                             <h2>{comment.username}</h2>
+                            <button className="edit-comment-button" onClick={navComment}>Edit</button>
                             <h3>{comment.content}</h3>
                             <h4>likes: {comment.likes}</h4>
                         </div>
@@ -66,4 +74,5 @@ console.log(user)
     }
     
 }
+
 
