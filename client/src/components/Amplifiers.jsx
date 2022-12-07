@@ -3,9 +3,15 @@ import axios from "axios"
 
 export default function Amplifiers (props) {
 console.log(props)
-    if (!props.instruments) {
-        return <h2>Loading please wait.</h2>
-    } else {         
+let instruments = props.instruments
+let length = instruments.length
+if (length === 0  ) {
+return (
+    <div>
+        <h1>Loading Please Wait...</h1>
+    </div>
+)
+} else {          
     return(
         <div className="grid">
             <div className="instrument">

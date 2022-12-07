@@ -1,8 +1,17 @@
 import { useNavigate } from "react-router"
 
 export default function Categories (props) {
+    let instruments = props.instruments
+    let length = instruments.length
     console.log(props)
     let navigate = useNavigate();
+    if (length === 0  ) {
+        return (
+            <div>
+                <h1>Loading... Please wait...</h1>
+            </div>
+        )
+    } else {
     return (
         <div className="grid">
             <div className="category c1" onClick={(e)=>navigate("/electric")}>Electric Guitars
@@ -33,4 +42,5 @@ export default function Categories (props) {
         
         
     )
+    }
 }
