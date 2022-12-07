@@ -17,6 +17,7 @@ export default function Comments ({user}) {
     }
 
     
+
 console.log(user)
     const [comments, setComments] =useState(null)
 
@@ -44,11 +45,11 @@ console.log(user)
         return (
             <div className="comment-container">
                 <CreateComment user={user} />
-                {/* <DeleteComment user={user} /> */}
+        
             <div className="comments">
                 <div className="new-comments">
                    {
-                    comments.map((comment) => (
+                    comments.map((comment, i) => (
                         <div key={comment.name}>
                             <h2>{comment.username}</h2>
 
@@ -62,7 +63,8 @@ console.log(user)
                             {
                                 (comment.username === user.username) 
                                 ?
-                                <button className="delete-comment-button" onClick={DeleteComment}>Delete</button>
+                                // <button className="delete-comment-button" onClick={handleSubmit(i)}>Delete</button>
+                                <DeleteComment comment={comment} />
                                 :
                                 null
                             }
