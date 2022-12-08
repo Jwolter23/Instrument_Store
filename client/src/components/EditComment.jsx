@@ -3,8 +3,10 @@ import axios from "axios"
 import { useState } from "react"
 import { useNavigate } from "react-router-dom";
 
+
 export default function EditComment (props) {
   console.log(props)
+
     let navigate = useNavigate();
   const [content, setContent] = useState({
     user_id: props.user.id, 

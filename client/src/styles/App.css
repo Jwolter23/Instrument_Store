@@ -349,6 +349,10 @@ form button:disabled {
 .delete-button{
   width: 4em;
   height: 2em;
+  margin: 0px;
+}
+.delete-button:hover{
+ background-color: red;
 }
 .edit-comment-button{
   width: 4em;
@@ -358,7 +362,7 @@ form button:disabled {
   display: flex;
   justify-content: center;
   justify-content: space-around;
- 
+  margin-top: 0.5em;
 }
 
 .content-section{
