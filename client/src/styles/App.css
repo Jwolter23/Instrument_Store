@@ -312,3 +312,28 @@ form button:disabled {
     height: 75%;
   }
 
+.grid-comments {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(100px, 1fr));
+    grid-gap: 5em;
+    margin-top: 5em;
+    margin-left: 5em;
+    margin-right: 5em;
+    margin-bottom: 8em;
+}
+.indiv-comments {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 15%;
+  height: 10em;
+  padding: 2em;
+}
+
+.delete-button{
+  width: 4em;
+}
+.edit-comment-button{
+  width: 4em;
+}
