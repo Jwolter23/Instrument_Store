@@ -4,7 +4,7 @@ import { useState } from "react"
 import { useNavigate } from "react-router-dom";
 import {Comments} from "./Comments";
 
-export default function EditComment ({user}, {Comments}) {
+export default function EditComment ({user}) {
     let navigate = useNavigate();
   const [content, setContent] = useState({
     user_id: user.id, 
