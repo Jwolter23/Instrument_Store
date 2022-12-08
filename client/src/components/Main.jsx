@@ -21,7 +21,7 @@ import DeleteComment from "./DeleteComment"
 
 export default function Main(props) {
     const [instruments, setInstruments] = useState([])
-  console.log(props.user)
+  console.log(props)
   useEffect(() => {
     const getInstruments = async () => {
       const res = await axios.get(`http://localhost:3001/api/instruments/view`)
@@ -57,7 +57,7 @@ export default function Main(props) {
                 instruments={instruments}/>}/>
                 <Route exact path="/pedalsandeffects" element={<PedalsAndEffects
                 instruments={instruments}/>}/>
-                <Route exact path="/comments" element={<Comments user={props.user} />} />
+                <Route exact path="/comments" element={<Comments user={props.user} setUser={props.setUser} toggleAuthenticated={props.toggleAuthenticated} authenticated={props.authenticated}/>} />
                 <Route exact path="/comments/:id" element={<EditComment  user={props.user}/>}/>
                 <Route exact path="/comments/:id" element={<DeleteComment  user={props.user}/>}/> 
             </Routes>
