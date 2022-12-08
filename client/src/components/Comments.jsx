@@ -52,13 +52,15 @@ console.log(props.user)
                 <div className="grid-comments">
                    {
                     comments.map((comment, i) => (
-
+                        <div>
                         <div className="indiv-comments"key={comment.name} onMouseOver={((e)=>props.setSelectedComment(comment))}>
-
+                           
                             <h2>{comment.username}</h2>
                             <h3>{comment.content}</h3>
                             <h4>likes: {comment.likes}</h4>
 
+                         
+                         </div>
                          <div className="button-container">
                          {
                              (comment.username === props.user.username) 
