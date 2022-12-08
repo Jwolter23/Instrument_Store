@@ -59,25 +59,6 @@ console.log(props.user)
                             <h3>{comment.content}</h3>
                             <h4>likes: {comment.likes}</h4>
 
-                            <div className="button-container">
-                            {
-                                (comment.username === props.user.username) 
-                                ?                             
-                                <button className="edit-comment-button"    onClick={navComment}>Edit</button>
-                                :
-                                 null
-                            }
-                            {
-                                (comment.username === props.user.username) 
-                                ?
-                                // <button className="delete-comment-button" onClick={handleSubmit(i)}>Delete</button>
-                                <DeleteComment selectedComment={props.selectedComment}comment={comment} />
-                                :
-                                null
-                            }
-                            </div>
-
-                        </div>
                          <div className="button-container">
                          {
                              (comment.username === props.user.username) 
@@ -90,7 +71,7 @@ console.log(props.user)
                              (comment.username === props.user.username) 
                              ?
                              // <button className="delete-comment-button" onClick={handleSubmit(i)}>Delete</button>
-                             <DeleteComment comment={comment} />
+                             <DeleteComment comment={comment} selectedComment={props.selectedComment} />
                              :
                              null
                          }

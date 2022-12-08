@@ -1,13 +1,9 @@
 import React from "react"
 import axios from "axios"
-
 import { useNavigate } from "react-router-dom";
-
 
 export default function DeleteComment (props) {
     let navigate = useNavigate();
- 
-  
   
   const handleSubmit = async (event) => {
     event.preventDefault()
@@ -25,16 +21,13 @@ export default function DeleteComment (props) {
   return (
     <div className="edit-comment-container">
       <form onSubmit={handleSubmit}>
-      
       <button
           className="delete-button"
           type="submit"
         >
           Delete
         </button>
-       
       </form>
-     
     </div>
   )
 }
