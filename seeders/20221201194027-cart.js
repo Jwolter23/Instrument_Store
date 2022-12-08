@@ -12,6 +12,7 @@ module.exports = {
           user_id: 1,
           createdAt: new Date(),
           updatedAt: new Date(),
+          cart_id: 1
         },
         {
           items: ["SG Standard"],
@@ -19,6 +20,7 @@ module.exports = {
           user_id: 2,
           createdAt: new Date(),
           updatedAt: new Date(),
+          cart_id: 2
         },
         {
           items: ["ES-335"],
@@ -26,6 +28,7 @@ module.exports = {
           user_id: 3,
           createdAt: new Date(),
           updatedAt: new Date(),
+          cart_id: 3
         },
       ],
       {}
