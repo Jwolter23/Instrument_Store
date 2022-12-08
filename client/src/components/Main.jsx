@@ -45,7 +45,7 @@ export default function Main(props) {
 
   const handleCart = async (event) => {
     await axios
-      .put(`http://localhost:3001/api/carts/${props.user.id}`, selectedCartItem)
+      .put(`http://localhost:3001/api/carts/${props.cart.id}`, selectedCartItem)
       // .then((res) => {
       //   console.log(res)
       //   console.log(res.data)
