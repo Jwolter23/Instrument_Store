@@ -3,6 +3,7 @@ import { SignInUser } from "../services/Auth";
 import { useNavigate } from "react-router-dom";
 
 const SignIn = (props) => {
+  console.log(props);
   let navigate = useNavigate();
 
   const [formValues, setFormValues] = useState({ username: "", password: "" });
