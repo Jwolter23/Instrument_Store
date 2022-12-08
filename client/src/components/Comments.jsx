@@ -7,18 +7,19 @@ import SignIn from "./SignIn"
 
 
 
-export default function Comments ({user}) {
+export default function Comments (props) {
+    console.log(props)
     let navigate = useNavigate()
 
 
 
       function navComment () {
-        navigate(`/comments/${user.id}`)
+        navigate(`/comments/${props.user.id}`)
     }
 
     
 
-console.log(user)
+console.log(props.user)
     const [comments, setComments] =useState(null)
 
     useEffect(() => {
@@ -38,13 +39,13 @@ console.log(user)
     if (!comments){
         return <h2>Loading... Please Wait</h2>
     }
-    if (!user) {
-        return <div><h2>Please Log in</h2><SignIn user={user}/></div>
+    if (!props.user) {
+        return <div><h2>Please Log in</h2><SignIn user={props.user} setUser={props.setUser} toggleAuthenticated={props.toggleAuthenticated} authenticated={props.authenticated}/></div>
     }
      else {
         return (
             <div className="comment-container">
-                <CreateComment user={user} />
+                <CreateComment user={props.user} />
         
             <div className="comments">
                 <div className="new-comments">
@@ -54,14 +55,14 @@ console.log(user)
                             <h2>{comment.username}</h2>
 
                             {
-                                (comment.username === user.username) 
+                                (comment.username === props.user.username) 
                                 ?                             
                                 <button className="edit-comment-button" onClick={navComment}>Edit</button>
                                 :
                                  null
                             }
                             {
-                                (comment.username === user.username) 
+                                (comment.username === props.user.username) 
                                 ?
                                 // <button className="delete-comment-button" onClick={handleSubmit(i)}>Delete</button>
                                 <DeleteComment comment={comment} />
