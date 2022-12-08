@@ -347,7 +347,37 @@ form button:disabled {
 
 .delete-button{
   width: 4em;
+  height: 2em;
 }
 .edit-comment-button{
   width: 4em;
+  height: 2em;
+}
+.button-container{
+  display: flex;
+  justify-content: center;
+  justify-content: space-around;
+ 
+}
+
+.content-section{
+  width: 25em;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+}
+
+.post-button{
+  width: 5em;
+  display: flex;
+  justify-content: center;
+  margin: 0px;
+  padding: 0.5em;
+  margin-left: 1em;
+}
+
+.create-comment-form {
+  display: flex;
+  justify-content: center;
+  margin: 2em;
 }
