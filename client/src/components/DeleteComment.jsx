@@ -4,7 +4,7 @@ import axios from "axios"
 import { useNavigate } from "react-router-dom";
 
 
-export default function DeleteComment ({ comment}) {
+export default function DeleteComment (props) {
     let navigate = useNavigate();
  
   
@@ -13,7 +13,7 @@ export default function DeleteComment ({ comment}) {
     event.preventDefault()
 
         await axios
-          .delete(`http://localhost:3001/api/comments/${comment.id}`)
+          .delete(`http://localhost:3001/api/comments/${props.selectedComment.id}`)
           .then((res) => {
             console.log(res)
             console.log(res.data)

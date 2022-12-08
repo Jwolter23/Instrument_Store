@@ -8,13 +8,14 @@ import SignIn from "./SignIn"
 
 
 export default function Comments (props) {
+
     console.log(props)
     let navigate = useNavigate()
 
 
 
       function navComment () {
-        navigate(`/comments/${props.user.id}`)
+        navigate(`/comments/${props.selectedComment.id}`)
     }
 
     
@@ -32,7 +33,7 @@ console.log(props.user)
         setComments(response.data)
         
 
-       
+
         }
         getComments()
     }, [])
@@ -51,11 +52,30 @@ console.log(props.user)
                 <div className="grid-comments">
                    {
                     comments.map((comment, i) => (
-                        <div>
-                        <div className="indiv-comments"key={comment.name}>
+
+                        <div className="indiv-comments"key={comment.name} onMouseOver={((e)=>props.setSelectedComment(comment))}>
+
                             <h2>{comment.username}</h2>
                             <h3>{comment.content}</h3>
                             <h4>likes: {comment.likes}</h4>
+
+                            <div className="button-container">
+                            {
+                                (comment.username === props.user.username) 
+                                ?                             
+                                <button className="edit-comment-button"    onClick={navComment}>Edit</button>
+                                :
+                                 null
+                            }
+                            {
+                                (comment.username === props.user.username) 
+                                ?
+                                // <button className="delete-comment-button" onClick={handleSubmit(i)}>Delete</button>
+                                <DeleteComment selectedComment={props.selectedComment}comment={comment} />
+                                :
+                                null
+                            }
+                            </div>
 
                         </div>
                          <div className="button-container">

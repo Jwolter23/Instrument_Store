@@ -21,6 +21,8 @@ import DeleteComment from "./DeleteComment"
 
 export default function Main(props) {
     const [instruments, setInstruments] = useState([])
+    const [selectedComment,setSelectedComment] = useState()
+    
   console.log(props)
   useEffect(() => {
     const getInstruments = async () => {
@@ -57,9 +59,9 @@ export default function Main(props) {
                 instruments={instruments}/>}/>
                 <Route exact path="/pedalsandeffects" element={<PedalsAndEffects
                 instruments={instruments}/>}/>
-                <Route exact path="/comments" element={<Comments user={props.user} setUser={props.setUser} toggleAuthenticated={props.toggleAuthenticated} authenticated={props.authenticated}/>} />
-                <Route exact path="/comments/:id" element={<EditComment  user={props.user}/>}/>
-                <Route exact path="/comments/:id" element={<DeleteComment  user={props.user}/>}/> 
+                <Route exact path="/comments" element={<Comments user={props.user} setUser={props.setUser} toggleAuthenticated={props.toggleAuthenticated} authenticated={props.authenticated} selectedComment={selectedComment} setSelectedComment={setSelectedComment}/>} />
+                <Route exact path="/comments/:id" element={<EditComment  selectedComment={selectedComment} user={props.user}/>}/>
+                <Route exact path="/comments/:id" element={<DeleteComment selectedComment={selectedComment} user={props.user}/>}/> 
             </Routes>
         </div>
     )
