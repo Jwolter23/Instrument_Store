@@ -57,9 +57,3 @@
 - Postgres SQL
 - Sequelize
 - Auth
-
-## Screenshots of Final Project
-
-<img src="Instrument_store/client/public/int1.png" alt="Home">
-<img src="Instrument_store/client/public/int2.png" alt="Categories">
-<img src="Instrument_store/client/public/int3.png" alt="Instruments">
