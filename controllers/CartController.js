@@ -17,7 +17,7 @@ const getAllCarts = async (req, res) => {
 
 const GetCartDetails = async (req, res) => {
   try {
-    const cart = await Cart.findByPk(req.params.user_id);
+    const cart = await Cart.findByPk(req.params.cart_id);
     res.send(cart);
   } catch (error) {
     throw error;
@@ -27,7 +27,7 @@ const GetCartDetails = async (req, res) => {
 const AddCart = async (req, res) => {
   try {
     let userId = parseInt(req.params.user_id);
-    let cartId = parseInt(req.params.cart_id);
+    let cartId = parseInt(req.params.user_id);
     let cartBody = { userId, cartId, ...req.body };
     let cart = await Cart.create(cartBody);
     res.send(cart);
