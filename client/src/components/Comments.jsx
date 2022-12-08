@@ -53,6 +53,10 @@ console.log(props.user)
                     comments.map((comment, i) => (
                         <div className="indiv-comments"key={comment.name}>
                             <h2>{comment.username}</h2>
+                            
+                            <h3>{comment.content}</h3>
+                            <h4>likes: {comment.likes}</h4>
+
                             <div className="button-container">
                             {
                                 (comment.username === props.user.username) 
@@ -70,8 +74,6 @@ console.log(props.user)
                                 null
                             }
                             </div>
-                            <h3>{comment.content}</h3>
-                            <h4>likes: {comment.likes}</h4>
                         </div>
                     ))
                    }

@@ -32,7 +32,7 @@ export default function CreateComment({ user }) {
 
   return (
     <div className="create-comment-container">
-      <form onSubmit={handleSubmit}>
+      <form className="create-comment-form" onSubmit={handleSubmit}>
         <input
           className="content-section"
           id="content"
@@ -44,7 +44,7 @@ export default function CreateComment({ user }) {
         />
       
         <button
-          className="post button"
+          className="post-button"
           type="submit"
         >
           Post
