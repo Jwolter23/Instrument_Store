@@ -1,5 +1,8 @@
 
+* {
+  text-decoration:none;
 
+}
 
 .header {
   display: flex;
@@ -14,6 +17,8 @@
   align-self: center;
   -webkit-text-stroke: 2px rgb(47,72,88,1);
   color: white;
+  font-family:monospace;
+
 }
 
 .header-text:hover {
@@ -27,6 +32,7 @@
 .login-options {
   float: right;
   padding-right: 3em;
+  font-family: fantasy;
 }
 .login {
   padding-right: 2em;
@@ -39,7 +45,8 @@ background-color: #a88c66;
 justify-content: space-evenly;
 height:40px;
 align-items: center;
-border-bottom: 2px solid black
+border-bottom: 2px solid black;
+font-family: cursive  ;
 }
 .nav-item1{
   font-size: 24px;
@@ -47,8 +54,8 @@ border-bottom: 2px solid black
   -webkit-text-stroke: 1px black;
 }
 .nav-item1:hover {
-font-size:36px;
--webkit-text-stroke: 1px blue;
+  transform: scale(1.1);
+  -webkit-text-stroke: 1px blue;
 }
 
 .nav-item2{
@@ -57,7 +64,7 @@ font-size:36px;
   -webkit-text-stroke: 1px black;
 }
 .nav-item2:hover {
-font-size:36px;
+  transform: scale(1.1);
 -webkit-text-stroke: 1px blue;
 }
 
@@ -65,9 +72,10 @@ font-size:36px;
   font-size: 24px;
   color: white;
   -webkit-text-stroke: 1px black;
+
 }
 .nav-item3:hover {
-font-size:36px;
+  transform: scale(1.1);
 -webkit-text-stroke: 1px blue;
 }
 .nav-item4{
@@ -76,7 +84,7 @@ font-size:36px;
   -webkit-text-stroke: 1px black;
 }
 .nav-item4:hover {
-font-size:36px;
+  transform: scale(1.1);
 -webkit-text-stroke: 1px blue;
 }
 
@@ -86,8 +94,8 @@ font-size:36px;
   -webkit-text-stroke: 1px black;
 }
 .nav-item5:hover {
-font-size:36px;
--webkit-text-stroke: 1px blue;
+  transform: scale(1.1);
+  -webkit-text-stroke: 1px blue;
 }
 
 .footer-container {
@@ -115,35 +123,41 @@ font-size:36px;
 .footer-item {
   display: flex;
   align-items: center;
+  margin-top: .3em;
   font-size: 24px;
   margin-right: 50px;
   text-decoration:none;
   color:white;
-
 }
 .color1 {
   text-shadow: 0 -1px 4px rgb(251, 0, 0), 0 -2px 10px #ff0, 0 -10px 20px #ff8000, 0 -18px 40px #F00;
   transition: text-shadow 1s ease-in-out;
+  font-family:fantasy;
+
 
 }
 .color2 {
   text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #ff0000, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 55px #ff0000, 0 0 75px #ff0000;   
+  font-family:fantasy;
 
         }
 
 .color3 {
   text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #1d4612, 0 0 30px #1d4612, 0 0 40px #1d4612, 0 0 55px #1d4612, 0 0 75px #1d4612;   
+  font-family:fantasy;
 
 }
 .color4 {
   text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #101dd1, 0 0 30px #101dd1, 0 0 40px #101dd1, 0 0 55px #101dd1, 0 0 75px #101dd1;   
+  font-family:fantasy;
 
 }
 
 .color5 {
   text-shadow: 0 0 5px rgb(0, 0, 0), 0 0 10px #FFF, 0 0 15px #FFF, 0 0 20px #5dabcd, 0 0 30px #5dabcd, 0 0 40px #5dabcd, 0 0 55px #5dabcd, 0 0 75px #5dabcd;   
-            
-              }
+  font-family:fantasy;
+ 
+}
 
 
 .footer-item:hover {
