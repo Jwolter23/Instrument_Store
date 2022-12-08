@@ -60,6 +60,6 @@
 
 ## Screenshots of Final Project
 
-<img src="/int1.png" alt="Home">
-<img src="/int2.png" alt="Categories">
-<img src="/int3.png" alt="Instruments">
+<img src="Instrument_store/client/public/int1.png" alt="Home">
+<img src="Instrument_store/client/public/int2.png" alt="Categories">
+<img src="Instrument_store/client/public/int3.png" alt="Instruments">
