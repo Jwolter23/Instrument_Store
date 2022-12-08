@@ -2,6 +2,7 @@ import { useState,useEffect } from "react"
 import axios from "axios"
 
 export default function Electric (props) {
+
     let instruments = props.instruments
     let length = instruments.length
     if (length === 0  ) {
@@ -13,13 +14,14 @@ export default function Electric (props) {
     } else {         
     return(
         <div className="grid">
-            <div className="instrument">
+            <div className="instrument" onMouseOver={((e)=> props.setSelectedCartItem)}>
             <h3>{props.instruments[0].brand}</h3>
             <h3>{props.instruments[0].model}</h3>
             <img className="instrument-image" src={props.instruments[0].image}></img>
             <h3>{props.instruments[0].color}</h3>
             <h3>{props.instruments[0].type}</h3>
             <h3>${props.instruments[0].price}</h3>
+            <button  onClick={((e)=> console.log(props.selectedCartItem))}>Add to Cart</button>
             </div>
 
             <div className="instrument">
