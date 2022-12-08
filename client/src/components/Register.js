@@ -35,6 +35,7 @@ const Register = () => {
       lastName: "",
       email: "",
     });
+
     navigate("/signin");
   };
 

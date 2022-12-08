@@ -45,12 +45,12 @@ export default function Main(props) {
 
   const handleCart = async (event) => {
     await axios
-      .put(`http://localhost:3001/api/carts/${props.cart.id}`, selectedCartItem)
-      // .then((res) => {
-      //   console.log(res)
-      //   console.log(res.data)
-      // })
-      // navigate("/comments")
+      .put(`http://localhost:3001/api/carts/view/${props.user.id}`, selectedCartItem)
+      .then((res) => {
+        console.log(res)
+        console.log(res.data)
+      })
+      navigate("/comments")
   }
 
 
