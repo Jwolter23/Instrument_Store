@@ -25,7 +25,7 @@ export default function Main(props) {
   let navigate = useNavigate()
 
     const [instruments, setInstruments] = useState([])
-    const [carts, setCarts] = useState([])
+    const [carts, setCarts] = useState({})
     const [selectedComment,setSelectedComment] = useState()
     const [selectedCartItem,setSelectedCartItem] = useState()
     
@@ -45,7 +45,7 @@ export default function Main(props) {
 
   const handleCart = async (event) => {
     await axios
-      .put(`http://localhost:3001/api/carts/view/${props.user.id}`, selectedCartItem)
+      .post(`http://localhost:3001/api/carts/${props.user.id}`, selectedCartItem)
       .then((res) => {
         console.log(res)
         console.log(res.data)
