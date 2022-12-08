@@ -19,22 +19,20 @@
 - The Instruments tab will take users to a page focused on various instruments categories as well as a search bar if users know the specific brand and type of instruments they would like to purchase.
 - Clicking on an Instrument will give the user the ability to read more about it, see reviews, and add it to their cart.
 - The Cart section will show users which instruments they added to their cart, along with the sub total and total.
-- Reviews will be under every Instrument and will show the reviewers username along with whatever message they add in about said instrument.
-- Reviews will be the first area that we tackle full CRUD, then moving on to comments and other models.
-- Finally we plan on adding in a comments section that can be anonymous or under someones username that lets our classmates or visters to the website let us know what they think of our site.
+- Comments will be where we tackle full CRUD allowing users to post, edit, delete and read comments from those who created accounts.
 
 ## Styling
 
 - We plan on making a classy website that caters to those who are interested in buying top-tier instruments.
-- We will be sticking to fairly neutral colors but will include features that allow users to hear a brief note of the instrument when clicked on.
+- We will be sticking to fairly neutral colors as we believe this fits well with the view we are going for.
 - Grid will be utilized quite a lot as it can help us be consistent and clean.
 - We will have a big focus on styling and creating a welcoming website.
 
 ## Logic and Tech
 
-- Right now we do not have any plans to use an API but will consider it once MVP is achieved.
 - Much of the logic is going to come from the back-end as it will be important to correctly set up our ERD so minimal updating will be needed in the future.
 - We plan to really have a lot of information in our ERD as our website will have a lot of data.
+- More info about the specific tech / programs used can be found down below.
 
 ## Post MVP
 
@@ -53,7 +51,16 @@
   [Link to Trello](https://trello.com/b/VuohaQH9/group-project-3)
 
 ## Technology Used
+
 - React.js
 - Postgres SQL
 - Sequelize
 - Auth
+
+## Screenshots
+
+<img alt="NYSE" width="700px" src="./Assets/projectScreen1.jpg" />
+
+<img alt="NYSE" width="700px" src="./Assets/projectScreen2.jpg" />
+
+<img alt="NYSE" width="700px" src="./Assets/projectScreen3.jpg" />
