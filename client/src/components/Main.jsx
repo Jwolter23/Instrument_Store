@@ -16,6 +16,7 @@ import PedalsAndEffects from "./PedalsAndEffects"
 import Everything from "./Everything"
 import EditComment from "./EditComment"
 import DeleteComment from "./DeleteComment"
+import Cart from "./Cart"
 
 
 
@@ -62,6 +63,7 @@ export default function Main(props) {
                 <Route exact path="/comments" element={<Comments user={props.user} setUser={props.setUser} toggleAuthenticated={props.toggleAuthenticated} authenticated={props.authenticated} selectedComment={selectedComment} setSelectedComment={setSelectedComment}/>} />
                 <Route exact path="/comments/:id" element={<EditComment  selectedComment={selectedComment} user={props.user}/>}/>
                 <Route exact path="/comments/:id" element={<DeleteComment selectedComment={selectedComment} user={props.user}/>}/> 
+                <Route exact path="/cart" element={<Cart  user={props.user} authenticated={props.authenticated}/>}/>
             </Routes>
         </div>
     )

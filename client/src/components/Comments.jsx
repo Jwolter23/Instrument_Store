@@ -77,7 +77,6 @@ console.log(props.user)
                             }
                             </div>
 
-                        </div>
                          <div className="button-container">
                          {
                              (comment.username === props.user.username) 
