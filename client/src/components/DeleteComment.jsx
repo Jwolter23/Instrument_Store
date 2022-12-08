@@ -27,7 +27,7 @@ export default function DeleteComment ({ comment}) {
       <form onSubmit={handleSubmit}>
       
       <button
-          className="post button"
+          className="delete-button"
           type="submit"
         >
           Delete

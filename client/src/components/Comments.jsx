@@ -48,12 +48,12 @@ console.log(props.user)
                 <CreateComment user={props.user} />
         
             <div className="comments">
-                <div className="new-comments">
+                <div className="grid-comments">
                    {
                     comments.map((comment, i) => (
-                        <div key={comment.name}>
+                        <div className="indiv-comments"key={comment.name}>
                             <h2>{comment.username}</h2>
-
+                            <div className="button-container">
                             {
                                 (comment.username === props.user.username) 
                                 ?                             
@@ -69,6 +69,7 @@ console.log(props.user)
                                 :
                                 null
                             }
+                            </div>
                             <h3>{comment.content}</h3>
                             <h4>likes: {comment.likes}</h4>
                         </div>
