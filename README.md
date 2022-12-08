@@ -52,4 +52,14 @@
 - Link to our rough draft TrelloBoard
   [Link to Trello](https://trello.com/b/VuohaQH9/group-project-3)
 
-## Component Hierarchy
+## Technology Used
+- React.js
+- Postgres SQL
+- Sequelize
+- Auth
+
+## Screenshots of Final Project
+
+<img src="/int1.png" alt="Home">
+<img src="/int2.png" alt="Categories">
+<img src="/int3.png" alt="Instruments">
